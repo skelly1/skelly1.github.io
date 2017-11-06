@@ -24,14 +24,48 @@
  * 
  *   mocha -R spec -g "#reverse-string"
  */
+
 function reverseString(input) {
-    // YOUR CODE GOES BELOW HERE //
+    var newString = "";
+    for (var i = input.length - 1; i > -1; i--) {
+        newString += input[i];
+    }
+    return newString;
+}
+reverseString('hello');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function reverseString(input) {
     
+//     var splitString = input.split(""); 
+ 
+//     var reverseArray = splitString.reverse(); 
+ 
+//     var joinArray = reverseArray.join(""); 
     
+//     return joinArray(hello); 
+// }
+ 
+// console.log(reverseString("hello"));
+ 
     
     
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 

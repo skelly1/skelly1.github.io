@@ -29,12 +29,67 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
+    var integerArray = [];
+    if (start < end) {
+      for (var i = start; i < end + 1; i++) {
+        integerArray.push(i);
+    }
+    } else if (start > end) {
+        for (var i = start; i > end - 1; i--) {
+            integerArray.push(i);
+        }
+}   return integerArray;
+}
+
+range(6, 2);
+    
+
+// function range(start, end) {
+//     // YOUR CODE GOES BELOW HERE //
+//     var integerArray = [];
+//     var reverseArray = [];
+//     if (start < end) {
+//         for (var i = start; i <= end; i++) {
+//             integerArray.push(i);
+//         }   return integerArray
+//     } else if (start < end) {
+//         for (var i = end; i <= start; i--)
+//             reverseArray.push(i);
+//         }
+//           return reverseArray;
+// }
+
+// range(6, 1)
+
+
+
+
+
+
+
+
+// function range(start, end) {
+
+// var integerArray = [];
+//     if (start < end) {
+//         var i = 0;
+//         while (i > start && i <= end);
+//         i++;
+//             integerArray.push(i);
+//     } else if (end > start) {
+//         while (i < end && i > start);
+//         i--;
+//             integerArray.push(i);
+//     }
+// }
+    
+        
     
     
     
     
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 

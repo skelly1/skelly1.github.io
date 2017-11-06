@@ -33,36 +33,67 @@
  *          
  *          WARNING: To pass the bonus test, the LAST full name should have NO
  *          new-line character added after it!
- * 
- * RUNNING YOUR CODE:
- * 
- * You can run the individual test by entering the following command:
- * 
- *   mocha -R spec -g "#contact-list"
  */
  
 // var contacts = require('./data/contact.json');
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
-} 
+   return {
+       id: id,
+       nameFirst: nameFirst,
+       nameLast: nameLast,
+    };
+}
 
 
 function makeContactList() {
-    /*
-     * You need something here to hold contacts. See length api for a hint:
-     */
     
-    
+    var contacts = [];
     return {
-        // we implemented the length api for you //
+        addContact: function(contact) {
+            return contacts.push(contact);
+        },
+        
+        removeContact: function(contact) {
+            var contactName = contact.nameFirst + " " + contact.nameLast;
+            var newName = "";
+            for (var i = 0; i < contacts.length; i++) {
+                newName = contacts[i].nameFirst + " " + contacts[i].nameLast;
+                if (contactName === newName){
+                    contacts.splice(i, 1);
+                }
+            }
+        },
+        
         length: function() {
             return contacts.length;
+        },
+        
+        find: function(fullName) {
+            var newName = "";
+            for (var i = 0; i < contacts.length; i++) {
+                newName = contacts[i].nameFirst + " " + contacts[i].nameLast;
+                if (newName === fullName) {
+                    return contacts[i];
+                }
+            }      return undefined;
+        },
+            
+    
+        all: function() {
+                var newString = "";
+                for (var i = 0; i < contacts.length; i++) {
+                    if (i !== contacts.length - 1) {
+                        newString += contacts[i].nameFirst + " " + contacts[i].nameLast + "\n";
+                    } else {
+                        newString += contacts[i].nameFirst + " " + contacts[i].nameLast;
+                    }
+                }
+                return newString;
         }
-    }
+    };
 }
-
 
 
 
